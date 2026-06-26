@@ -130,7 +130,7 @@ footer {
 
 <p>IP: <b>play.lucifermc.fun</b> 
 <button class="copy-btn" onclick="copyIP()">Copy</button></p>
-<p>Port: 25596</p>
+<p>Port: 19116</p>
 
 <button class="refresh-btn" onclick="getServerStatus()">🔄 Refresh</button>
 <br><br>
@@ -158,7 +158,7 @@ async function getServerStatus() {
     document.getElementById("players").innerText = "";
 
     try {
-        let res = await fetch("https://api.mcstatus.io/v2/status/java/play.lucifermc.fun:25596?nocache=" + Date.now());
+        let res = await fetch("https://api.mcstatus.io/v2/status/java/play.lucifermc.fun:19116?nocache=" + Date.now());
         let data = await res.json();
 
         if (data.online) {
